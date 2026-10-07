@@ -5,7 +5,7 @@ export default function Footer() {
     <footer className="bg-accent-gray py-20 px-6 md:px-12">
       <div className="max-w-4xl mx-auto text-center flex flex-col items-center">
         {/* Logo */}
-        <h2 className="font-serif text-4xl font-bold mb-10">LJV Media</h2>
+        <h2 className="font-serif text-4xl font-bold mb-10">Seraphic Medium</h2>
 
         {/* Final CTA */}
         <Link
@@ -24,7 +24,7 @@ export default function Footer() {
 
         {/* Copyright */}
         <p className="mt-8 text-sm text-gray-400">
-          &copy; {new Date().getFullYear()} LJV Media. All rights reserved.
+          &copy; {new Date().getFullYear()} Seraphic Medium. All rights reserved.
         </p>
       </div>
     </footer>
