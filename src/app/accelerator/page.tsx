@@ -28,12 +28,9 @@ export default function AcceleratorPage() {
           </p>
 
           <div className="w-full max-w-3xl mx-auto mb-10">
-            <video 
-              src="/assets/1.mp4" 
-              autoPlay 
-              loop 
-              muted 
-              playsInline 
+            <img 
+              src="/assets/heroimage.jpeg" 
+              alt="Seraphic Medium Growth Strategy" 
               className="w-full border border-zinc-200 shadow-xl rounded-2xl object-cover" 
             />
           </div>
