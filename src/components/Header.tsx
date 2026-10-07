@@ -40,8 +40,8 @@ export default function Header() {
           <Link href="/" className="hover:text-gray-400 transition-colors">
             Home
           </Link>
-          <Link href="#resources" className="hover:text-gray-400 transition-colors">
-            Resources
+          <Link href="/accelerator" className="hover:text-gray-400 transition-colors">
+            Accelerator
           </Link>
         </nav>
 
@@ -70,8 +70,8 @@ export default function Header() {
           <Link href="#home" onClick={() => setMobileMenuOpen(false)}>
             Home
           </Link>
-          <Link href="#resources" onClick={() => setMobileMenuOpen(false)}>
-            Resources
+          <Link href="/accelerator" onClick={() => setMobileMenuOpen(false)}>
+            Accelerator
           </Link>
           <Link
             href="#contact"
