@@ -42,7 +42,7 @@ export default function MediaCollage() {
         <div className="absolute bottom-[10%] right-[2%] w-[45%] z-40 md:relative md:w-[200px] md:top-auto md:right-auto lg:w-[260px] aspect-square rounded-[1rem] md:rounded-[1.5rem] border-[3px] border-black bg-[#A8B632] overflow-hidden shadow-xl md:translate-y-24 flex-shrink-0 flex flex-col p-2 md:p-6 justify-between">
           <div className="text-center pt-1 md:pt-0">
             <h4 className="text-white text-[7px] sm:text-[10px] md:text-sm lg:text-base font-extrabold leading-tight uppercase text-center drop-shadow-md">
-              "WHY DID NO ONE TELL ME ABOUT NATURAL CAFFEINE?"
+              &ldquo;WHY DID NO ONE TELL ME ABOUT NATURAL CAFFEINE?&rdquo;
             </h4>
           </div>
           <div className="flex-1 relative flex items-center justify-center my-1 md:my-2">

@@ -1,59 +1,71 @@
-import Link from "next/link";
 import Image from "next/image";
 import TestimonialCarousel from "@/components/TestimonialCarousel";
+import HeroCarousel from "@/components/HeroCarousel";
+import BookingButton from "@/components/BookingButton";
+import TidyCalEmbed from "@/components/TidyCalEmbed";
+import { Check } from "lucide-react";
 
 export default function AcceleratorPage() {
   return (
     <main className="min-h-screen bg-gray-50 text-black font-sans selection:bg-orange-200">
 
       {/* Hero Section */}
-      <section className="bg-zinc-100 py-24 px-6 md:px-12 border-b border-zinc-200">
-        <div className="max-w-6xl mx-auto bg-white rounded-[3rem] shadow-[0_20px_40px_-15px_rgba(0,0,0,0.05)] border border-zinc-200/50 py-20 px-8 md:px-16 flex flex-col items-center text-center">
+      <section className="bg-zinc-100 py-12 md:py-24 px-4 md:px-12 border-b border-zinc-200">
+        <div className="max-w-6xl mx-auto bg-white rounded-3xl md:rounded-[3rem] shadow-[0_20px_40px_-15px_rgba(0,0,0,0.05)] border border-zinc-200/50 py-12 md:py-20 px-6 md:px-16 flex flex-col items-center text-center">
           
           <Image 
             src="/logo-txt-black.png" 
             alt="Seraphic Medium Logo" 
             width={240} 
             height={80} 
-            className="h-16 md:h-20 w-auto object-contain mb-8"
+            className="h-12 md:h-20 w-auto object-contain mb-6 md:mb-8"
             priority
           />
 
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-none tracking-tighter text-zinc-950 max-w-4xl font-sans">
-            We scale 7- & 8-figure DTC brands with converting ad creatives.
+          <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-4 md:mb-6 leading-tight md:leading-none tracking-tighter text-zinc-950 max-w-4xl font-sans">
+            Scale Your Clothing Brand to $30K/Month With Profitable Meta Ads & AI Content.
           </h1>
           
-          <p className="text-lg md:text-xl mb-10 max-w-3xl font-normal text-zinc-600 leading-relaxed">
+          <p className="text-base sm:text-lg md:text-xl mb-8 md:mb-10 max-w-3xl font-normal text-zinc-600 leading-relaxed">
             A proven 3-step strategy to turn views into revenue, lower your CPA, and scale your brand to the next level. No generic fluff.
           </p>
 
-          <div className="w-full max-w-3xl mx-auto mb-10">
-            <img 
-              src="/assets/heroimage.jpeg" 
-              alt="Seraphic Medium Growth Strategy" 
-              className="w-full border border-zinc-200 shadow-xl rounded-2xl object-cover" 
-            />
-          </div>
+          <HeroCarousel />
 
-          <div className="flex flex-col items-center w-full sm:w-auto">
-            <Link 
-              href="https://tidycal.com/ahmadrashid/30-minute-meeting"
-              className="bg-orange-500 text-white px-10 py-5 text-xl md:text-2xl font-bold rounded-full shadow-md hover:shadow-lg hover:bg-orange-600 active:-translate-y-[1px] active:scale-[0.98] transition-all flex items-center justify-center w-full sm:w-auto"
+          <div className="flex flex-col items-center w-full sm:w-auto mt-4 md:mt-0">
+            <BookingButton 
+              href="https://tidycal.com/ahmadrashid/brand-strategy-consultation"
+              className="bg-orange-500 text-white px-6 py-4 md:px-10 md:py-5 text-lg md:text-2xl font-bold rounded-full shadow-md hover:shadow-lg hover:bg-orange-600 active:-translate-y-[1px] active:scale-[0.98] transition-all flex items-center justify-center w-full sm:w-auto"
             >
               Book My Free Growth Call
-            </Link>
-            <span className="text-sm font-medium mt-4 text-zinc-500 tracking-wide">Only takes 30 seconds*</span>
+            </BookingButton>
+            <span className="text-xs md:text-sm font-medium mt-3 md:mt-4 text-zinc-500 tracking-wide">Only takes 30 seconds*</span>
           </div>
 
-          <div className="mt-12 space-y-3 text-base md:text-lg text-left text-zinc-800 font-medium inline-block mx-auto">
-            <div className="flex items-center">
-              <span className="mr-3 text-xl">✅</span> Data-Driven Strategy & Multi-channel attribution
+          <div className="mt-12 space-y-3.5 text-base md:text-lg text-left text-zinc-700 font-normal inline-block mx-auto max-w-2xl">
+            <div className="flex items-start sm:items-center">
+              <div className="w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mr-3 mt-0.5 sm:mt-0 flex-shrink-0">
+                <Check size={13} strokeWidth={3} />
+              </div>
+              <div>
+                <span className="font-semibold text-zinc-950">Profitable Meta Ads</span> – Focus on better ROAS and scalable sales.
+              </div>
             </div>
-            <div className="flex items-center">
-              <span className="mr-3 text-xl">✅</span> Premium UGC & High-Converting Production
+            <div className="flex items-start sm:items-center">
+              <div className="w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mr-3 mt-0.5 sm:mt-0 flex-shrink-0">
+                <Check size={13} strokeWidth={3} />
+              </div>
+              <div>
+                <span className="font-semibold text-zinc-950">AI-Powered Ad Creatives</span> – Create fresh, scroll-stopping content without constant production costs.
+              </div>
             </div>
-            <div className="flex items-center">
-              <span className="mr-3 text-xl">✅</span> Continuous Iteration for Sustainable, profitable scale
+            <div className="flex items-start sm:items-center">
+              <div className="w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mr-3 mt-0.5 sm:mt-0 flex-shrink-0">
+                <Check size={13} strokeWidth={3} />
+              </div>
+              <div>
+                <span className="font-semibold text-zinc-950">A Clear Growth Strategy</span> – Turn your clothing brand into a scalable e-commerce business.
+              </div>
             </div>
           </div>
 
@@ -117,19 +129,22 @@ export default function AcceleratorPage() {
             <p className="text-lg md:text-xl text-zinc-600 leading-relaxed max-w-[55ch] mb-12">
               Your store needs more than traffic to scale. You need the right systems working together—from acquisition and AI content to branding, conversion, customer experience, and retention. When these six areas are aligned, your brand has the foundation to grow faster and profitably.
             </p>
-            <Link 
-              href="https://tidycal.com/ahmadrashid/30-minute-meeting"
+            <BookingButton 
+              href="https://tidycal.com/ahmadrashid/brand-strategy-consultation"
               className="inline-flex items-center justify-center bg-zinc-950 text-white px-10 py-5 text-lg font-medium transition-all duration-300 hover:bg-zinc-800 active:-translate-y-[1px] active:scale-[0.98] shadow-md hover:shadow-lg rounded-sm"
             >
               Book Your Strategy Call
-            </Link>
+            </BookingButton>
           </div>
 
         </div>
       </section>
 
-{/* Testimonials Carousel Section */}
+      {/* Testimonials Carousel Section */}
       <TestimonialCarousel />
+
+      {/* Embedded Scheduling Section */}
+      <TidyCalEmbed path="ahmadrashid/brand-strategy-consultation" />
 
     </main>
   );
