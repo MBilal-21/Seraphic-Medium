@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Menu, X } from "lucide-react";
+import BookingButton from "@/components/BookingButton";
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -47,12 +48,12 @@ export default function Header() {
 
         {/* CTA Button */}
         <div className="hidden md:block">
-          <Link
-            href="https://tidycal.com/ahmadrashid/30-minute-meeting"
+          <BookingButton
+            href="https://tidycal.com/ahmadrashid/brand-strategy-consultation"
             className="bg-white text-black px-6 py-2.5 rounded-full font-semibold hover:bg-gray-200 transition-colors border border-black/10"
           >
             Book a Call with us Today
-          </Link>
+          </BookingButton>
         </div>
 
         {/* Mobile Menu Toggle */}
@@ -73,13 +74,13 @@ export default function Header() {
           <Link href="/accelerator" onClick={() => setMobileMenuOpen(false)}>
             Accelerator
           </Link>
-          <Link
-            href="#contact"
+          <BookingButton
+            href="https://tidycal.com/ahmadrashid/brand-strategy-consultation"
             onClick={() => setMobileMenuOpen(false)}
             className="bg-white text-black px-6 py-3 rounded-full font-semibold text-center mt-4"
           >
             Book a Call with us Today
-          </Link>
+          </BookingButton>
         </div>
       )}
     </header>

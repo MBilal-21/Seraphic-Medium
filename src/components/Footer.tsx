@@ -1,4 +1,5 @@
 import Link from "next/link";
+import BookingButton from "@/components/BookingButton";
 
 export default function Footer() {
   return (
@@ -8,12 +9,12 @@ export default function Footer() {
         <h2 className="font-serif text-4xl font-bold mb-10">Seraphic Medium</h2>
 
         {/* Final CTA */}
-        <Link
-          href="#contact"
+        <BookingButton
+          href="https://tidycal.com/ahmadrashid/brand-strategy-consultation"
           className="bg-primary-dark text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-black/80 transition-transform hover:scale-105"
         >
           Speak To Our Team Today
-        </Link>
+        </BookingButton>
 
         {/* Links */}
         <div className="mt-16 flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8 text-sm text-gray-500">

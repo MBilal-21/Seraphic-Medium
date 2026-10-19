@@ -5,6 +5,7 @@ import PaidAdvertising from "@/components/PaidAdvertising";
 import WinningCreatives from "@/components/WinningCreatives";
 import TeamSection from "@/components/TeamSection";
 import ResultsSection from "@/components/ResultsSection";
+import TidyCalEmbed from "@/components/TidyCalEmbed";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <WinningCreatives />
       <TeamSection />
       <ResultsSection />
+      <TidyCalEmbed path="ahmadrashid/brand-strategy-consultation" />
     </main>
   );
 }

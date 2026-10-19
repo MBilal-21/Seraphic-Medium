@@ -1,5 +1,5 @@
-import Link from "next/link";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
+import BookingButton from "@/components/BookingButton";
 
 export default function Hero() {
   return (
@@ -13,12 +13,12 @@ export default function Hero() {
       </p>
 
       <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-        <Link
-          href="https://tidycal.com/ahmadrashid/30-minute-meeting"
+        <BookingButton
+          href="https://tidycal.com/ahmadrashid/brand-strategy-consultation"
           className="bg-primary-dark text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-black/90 transition-all hover:scale-105 flex items-center justify-center"
         >
           Book a Call with us Today <ArrowRight className="ml-2 w-5 h-5" />
-        </Link>
+        </BookingButton>
       </div>
 
       <div className="mt-16 flex flex-col md:flex-row justify-center gap-8 md:gap-16 text-sm md:text-base text-gray-600 font-medium">
