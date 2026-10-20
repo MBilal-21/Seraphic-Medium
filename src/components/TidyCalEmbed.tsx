@@ -13,6 +13,21 @@ export default function TidyCalEmbed({
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    // Listen for TidyCal booking completion event and redirect to thank-you page
+    const handleMessage = (e: MessageEvent) => {
+      if (
+        (e.origin === "https://tidycal.com" || e.origin.endsWith("tidycal.com")) &&
+        e.data &&
+        (e.data.event === "bookingComplete" ||
+          e.data.event === "booking_complete" ||
+          e.data === "bookingComplete")
+      ) {
+        window.location.href = "/thank-you";
+      }
+    };
+
+    window.addEventListener("message", handleMessage);
+
     const scriptId = "tidycal-embed-script";
     let script = document.getElementById(scriptId) as HTMLScriptElement | null;
 
@@ -39,6 +54,10 @@ export default function TidyCalEmbed({
     } else {
       initEmbed();
     }
+
+    return () => {
+      window.removeEventListener("message", handleMessage);
+    };
   }, [path]);
 
   return (
